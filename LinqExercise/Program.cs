@@ -110,8 +110,8 @@ namespace LinqExercise
             Console.WriteLine($"{avg10and35}");
 
             //TODO: Add an employee to the end of the list without using employees.Add()
-            var dallas = new Employee();
-            employees = employees.Append(dallas).ToList();
+            var dallas = new Employee() { FirstName = "Dallas", LastName = "Yu", YearsOfExperience = 1 };
+            employees.Append(dallas).ToList().ForEach(x => Console.WriteLine(x.FullName));
             
 
             Console.WriteLine();
